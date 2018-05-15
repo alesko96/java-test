@@ -14,9 +14,9 @@ interface CurrencyConverter {
        
     double EURO_TO_PLN_RATIO = 4.25181073;
     
-    Amount convertToPln(Amount euroAmount{
+    Amount convertToPln(Amount euroAmount){
         public Amount pln;
-        pln = Amount*EURO_TO_PLN_RATIO;
+        pln = euroAmount/EURO_TO_PLN_RATIO;
         java.text.DecimalFormat df = new java.text.DecimalFormat();
         df.setMaximumFractionDigits(PRECISION);
         df.setMinimumFractionDigits(PRECISION);
@@ -24,7 +24,7 @@ interface CurrencyConverter {
     }
     Amount convertToEur(Amount plnAmount){
         public Amount eur;
-        eur = Amount/EURO_TO_PLN_RATIO;
+        eur = plnAmoun*EURO_TO_PLN_RATIO;
         java.text.DecimalFormat df = new java.text.DecimalFormat();
         df.setMaximumFractionDigits(PRECISION);
         df.setMinimumFractionDigits(PRECISION);
