@@ -6,6 +6,20 @@ package pl.sii.eu;
  */
 @FunctionalInterface
 interface DuplicateChecker {
+    boolean hasDuplicateCharacters(String input){
+        int counter=0;
+        boolean bool = false;
+        String s = input.trim();
+        String upper = s.toUpperCase();
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i)==upper.charAt(i))
+                counter++;
+         }
+        if(counter>0)
+            bool = true;
+        
+        return bool;
+    }
 
-    boolean hasDuplicateCharacters(String input);
+    hasDuplicateCharacters("String");
 }
